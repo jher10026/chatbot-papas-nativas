@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+models/
+results/
+chatbot_analytics.log
+tracker_store.db
+login_events.db
+rasa.db
+*.db

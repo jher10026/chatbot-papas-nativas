@@ -1,0 +1,595 @@
+version: "3.1"
+
+intents:
+  - saludar
+  - despedir
+  - afirmar
+  - negar
+  - agradecer
+  - preguntar_variedades
+  - preguntar_variedad_especifica
+  - preguntar_beneficios
+  - preguntar_cultivo
+  - preguntar_historia
+  - preguntar_regiones
+  - preguntar_usos_culinarios
+  - preguntar_precio
+  - preguntar_conservacion
+  - preguntar_diferencias
+  - preguntar_biodiversidad
+  - preguntar_exportacion
+  - preguntar_plagas
+  - bot_desafio
+
+entities:
+  - variedad
+  - region
+
+slots:
+  variedad_consultada:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: variedad
+
+responses:
+  utter_saludar:
+  - text: "¡Hola! 👋 Soy tu asistente especializado en papas nativas del Perú. Tengo información sobre más de 3,000 variedades. ¿En qué puedo ayudarte?"
+  - text: "¡Bienvenido! 🥔 Estoy aquí para contarte todo sobre las papas nativas peruanas, patrimonio de nuestra biodiversidad. ¿Qué te gustaría saber?"
+  
+  utter_despedir:
+  - text: "¡Hasta pronto! 🌟 Espero que hayas aprendido algo nuevo sobre nuestras papas nativas. ¡Vuelve cuando quieras!"
+  - text: "¡Nos vemos! 👋 Recuerda que las papas nativas son un tesoro de nuestra cultura. ¡Que tengas un excelente día!"
+  
+  utter_agradecer:
+  - text: "¡De nada! 😊 Es un placer ayudarte a conocer más sobre las papas nativas del Perú."
+  - text: "¡Con gusto! Si tienes más preguntas sobre papas nativas, estoy aquí para ayudarte."
+  
+  utter_preguntar_variedades:
+  - text: |
+      🥔 **VARIEDADES DE PAPAS NATIVAS DEL PERÚ**
+      
+      Perú es el centro de origen de la papa con más de **3,800 variedades nativas**. Las más populares son:
+      
+      📌 **Papas Amarillas:**
+      • Tumbay/Peruanita - Textura cremosa, ideal para puré
+      • Huayro amarillo - Sabor dulce, perfecta para guisos
+      
+      📌 **Papas de Colores:**
+      • Papa morada/negra - Rica en antioxidantes
+      • Papa huamantanga - Piel rosada, muy nutritiva
+      • Papa ccompis - Pequeña y sabrosa
+      
+      📌 **Papas Blancas:**
+      • Yungay/Canchan - Uso versátil
+      • Perricholi - Excelente para freír
+      
+      📌 **Papas Especiales:**
+      • Huayro rojo - Tradicional en pachamancas
+      • Papa huagalina - Resistente a altura
+      
+      ¿Te gustaría saber más sobre alguna variedad específica?
+  
+  utter_preguntar_beneficios:
+  - text: |
+      🌟 **BENEFICIOS NUTRICIONALES DE LAS PAPAS NATIVAS**
+      
+      Las papas nativas peruanas son un superalimento con múltiples beneficios:
+      
+      ✅ **Vitaminas y Minerales:**
+      • Vitamina C: 20-30 mg por 100g (33% VD)
+      • Potasio: 400-500 mg (ayuda al corazón)
+      • Hierro: Especialmente en variedades oscuras
+      • Vitaminas B6 y B3
+      
+      ✅ **Antioxidantes:**
+      • Las papas moradas/negras contienen antocianinas
+      • Previenen el envejecimiento celular
+      • Protegen contra enfermedades crónicas
+      
+      ✅ **Fibra:**
+      • 2-3g por 100g (con cáscara)
+      • Mejora la digestión
+      
+      ✅ **Carbohidratos complejos:**
+      • Energía de liberación lenta
+      • Bajo índice glucémico (papas nativas)
+      
+      ✅ **Propiedades especiales:**
+      • Antiinflamatorias
+      • Alcalinizantes
+      • Libre de gluten
+      
+      💡 **Tip:** Las papas de colores intensos tienen más nutrientes. ¡Consume la cáscara bien lavada!
+  
+  utter_preguntar_cultivo:
+  - text: |
+      🌱 **CULTIVO DE PAPAS NATIVAS EN PERÚ**
+      
+      **📍 Altitud:** 3,000 - 4,200 msnm (zonas altoandinas)
+      
+      **🌡️ Clima:**
+      • Temperatura: 10-20°C
+      • Resistentes a heladas hasta -3°C
+      • Necesitan clima frío
+      
+      **📅 Calendario Agrícola:**
+      • **Siembra:** Septiembre - Diciembre (época de lluvias)
+      • **Desarrollo:** 4-6 meses
+      • **Cosecha:** Abril - Junio (época seca)
+      
+      **🌾 Proceso de Cultivo:**
+      1. Preparación del suelo (barbecho)
+      2. Selección de semilla certificada
+      3. Siembra manual o con yunta
+      4. Aporque (acumular tierra)
+      5. Control de plagas natural
+      6. Cosecha manual
+      
+      **💧 Riego:**
+      • Principalmente secano (lluvia)
+      • Algunas zonas usan riego complementario
+      
+      **🌿 Técnicas Ancestrales:**
+      • Rotación de cultivos
+      • Uso de terrazas (andenes)
+      • Asociación con habas o quinua
+      • Descanso de tierras (barbecho)
+      
+      **🧑‍🌾 Productividad:** 8-15 toneladas/hectárea
+      
+      Los agricultores andinos preservan conocimientos de más de 8,000 años.
+  
+  utter_preguntar_historia:
+  - text: |
+      📜 **HISTORIA DE LA PAPA PERUANA**
+      
+      **🏔️ Origen (8,000 - 5,000 a.C.):**
+      • Domesticada en la región del Lago Titicaca (Perú-Bolivia)
+      • De la especie silvestre Solanum brevicaule
+      • Primera evidencia arqueológica en Chihua (Perú)
+      
+      **👑 Época Preinca e Inca:**
+      • Llamada "papa" en quechua
+      • Alimento sagrado y base de la dieta
+      • Los incas desarrollaron el chuño (papa deshidratada)
+      • Sistema de almacenamiento en colcas
+      • Se cultivaban cientos de variedades
+      
+      **🌍 Conquista Española (siglo XVI):**
+      • 1532: Españoles conocen la papa
+      • 1570: Llevada a Europa por primera vez
+      • Inicialmente rechazada en Europa
+      
+      **🚀 Expansión Mundial:**
+      • Siglo XVIII: Adoptada en Europa
+      • 1840: Irlandeses dependen de ella
+      • Hoy: 4° cultivo más importante del mundo
+      
+      **🏆 Reconocimientos:**
+      • 2008: Año Internacional de la Papa (ONU)
+      • Centro de Origen mundial
+      • Perú conserva la mayor biodiversidad
+      
+      **📊 Cifras:**
+      • De las 5,000 variedades mundiales, 3,800 son peruanas
+      • 600,000 familias viven del cultivo en Perú
+      
+      ¡La papa salvó al mundo del hambre! 🌎
+  
+  utter_preguntar_regiones:
+  - text: |
+      🗺️ **REGIONES PRODUCTORAS DE PAPA NATIVA**
+      
+      **🥇 TOP 5 REGIONES:**
+      
+      **1. PUNO** (19% producción nacional)
+      • Altiplano peruano
+      • Mayor diversidad de variedades
+      • Papas amargas para chuño
+      • Principales provincias: Azángaro, Melgar, Lampa
+      
+      **2. CUSCO** (12% producción)
+      • Parque de la Papa (Pisac) - 1,300 variedades
+      • Cultivo en andenes incaicos
+      • Papas nativas de colores
+      • Valle Sagrado: zona privilegiada
+      
+      **3. HUANCAVELICA** (11% producción)
+      • Variedades tradicionales únicas
+      • Cultivo orgánico ancestral
+      • Papas de gran calidad
+      
+      **4. JUNÍN** (10% producción)
+      • Valle del Mantaro
+      • Papas amarillas de excelencia
+      • Comercialización a Lima
+      
+      **5. APURÍMAC** (8% producción)
+      • Variedades nativas exclusivas
+      • Pequeños agricultores
+      • Alta calidad nutricional
+      
+      **Otras regiones importantes:**
+      • Ayacucho, Cajamarca, La Libertad, Áncash, Huánuco
+      
+      **🌡️ Dato:** El 70% de la papa nativa se cultiva sobre los 3,000 msnm
+      
+      **🏛️ Centros de Conservación:**
+      • CIP (Centro Internacional de la Papa) - Lima
+      • INIA (Instituto Nacional de Innovación Agraria)
+      • Parque de la Papa - Cusco
+  
+  utter_preguntar_usos_culinarios:
+  - text: |
+      👨‍🍳 **USOS CULINARIOS DE LAS PAPAS NATIVAS**
+      
+      **🥘 POR VARIEDAD:**
+      
+      **PAPA AMARILLA (Tumbay/Peruanita):**
+      ✓ Causa limeña
+      ✓ Papa a la huancaína
+      ✓ Puré
+      ✓ Ocopa
+      ✓ Papa rellena
+      
+      **PAPA HUAYRO:**
+      ✓ Pachamanca
+      ✓ Guisos y estofados
+      ✓ Sancochado
+      ✓ Carapulcra
+      
+      **PAPA MORADA/NEGRA:**
+      ✓ Chicha morada con papa
+      ✓ Ensaladas (decorativa)
+      ✓ Papas fritas de colores
+      
+      **PAPA CANCHAN/YUNGAY:**
+      ✓ Papas fritas
+      ✓ Papas sancochadas
+      ✓ Uso versátil
+      
+      **🍲 PLATOS TRADICIONALES:**
+      
+      • **Carapulcra:** Papa seca + maní + especias
+      • **Chuño:** Papa deshidratada andina
+      • **Tocosh:** Papa fermentada (medicinal)
+      • **Watia:** Papa al horno de tierra
+      • **Huatia:** Cocción con piedras calientes
+      
+      **💡 TIPS DE COCINA:**
+      • Papa amarilla: Ideal hervida (no frita)
+      • Papa blanca: Perfecta para freír
+      • Papa huayro: Mantiene forma en guisos
+      • Con cáscara: Conserva más nutrientes
+      
+      **🌟 VALOR GASTRONÓMICO:**
+      La papa es la base de 3,000+ recetas peruanas
+  
+  utter_preguntar_precio:
+  - text: |
+      💰 **PRECIOS DE PAPAS NATIVAS**
+      
+      **📊 Mercado Minorista (promedio 2024-2025):**
+      
+      • Papa amarilla: S/ 4.00 - 5.50/kg
+      • Papa huayro: S/ 3.50 - 4.50/kg
+      • Papa blanca (canchan): S/ 2.50 - 3.50/kg
+      • Papa negra: S/ 4.00 - 5.00/kg
+      • Papa huamantanga: S/ 4.50 - 6.00/kg
+      
+      **🏪 DÓNDE COMPRAR:**
+      
+      ✓ Mercados mayoristas (más económico)
+      ✓ Mercados locales
+      ✓ Ferias agrícolas
+      ✓ Tiendas orgánicas (precio premium)
+      ✓ Supermercados (Wong, Plaza Vea)
+      ✓ Venta directa de productores
+      
+      **📈 FACTORES QUE AFECTAN EL PRECIO:**
+      • Temporada de cosecha (abril-junio: más barato)
+      • Región de compra
+      • Calidad y tamaño
+      • Oferta y demanda
+      
+      **💡 TIP:** Compra en época de cosecha para mejores precios
+      
+      ⚠️ Nota: Precios referenciales, pueden variar según región y temporada.
+  
+  utter_preguntar_conservacion:
+  - text: |
+      📦 **CONSERVACIÓN DE PAPAS NATIVAS**
+      
+      **🏠 ALMACENAMIENTO EN CASA:**
+      
+      ✅ **Lugar ideal:**
+      • Espacio fresco (7-10°C)
+      • Oscuro (evita brotes)
+      • Seco (70% humedad)
+      • Ventilado
+      
+      ✅ **Dónde guardar:**
+      • Despensa
+      • Bodega
+      • Cajón de cocina oscuro
+      
+      ❌ **NUNCA:**
+      • En refrigerador (cambia sabor y textura)
+      • Junto a cebollas (acelera descomposición)
+      • En bolsas plásticas cerradas
+      • Expuestas a luz solar
+      
+      **⏱️ TIEMPO DE CONSERVACIÓN:**
+      • Papa nativa: 2-3 meses
+      • Papa común: 3-4 meses
+      
+      **🌱 SI BROTAN:**
+      • Brotes pequeños: Retíralos y consume pronto
+      • Brotes grandes + arrugada: Descarta
+      • Verde en piel: Descarta (solanina tóxica)
+      
+      **❄️ CONGELACIÓN:**
+      • No recomendado en crudo
+      • Sí puedes congelar: puré, papas cocidas
+      
+      **🥫 MÉTODOS ANCESTRALES:**
+      • **Chuño:** Papa deshidratada (dura años)
+      • **Moraya:** Papa blanca deshidratada
+      • Métodos usados hace 8,000 años
+      
+      **💡 TIP:** Guarda en bolsa de papel o caja de cartón
+  
+  utter_preguntar_diferencias:
+  - text: |
+      🔍 **PAPA NATIVA VS PAPA COMÚN**
+      
+      **🥔 PAPA NATIVA:**
+      ✓ 3,800 variedades en Perú
+      ✓ Cultivada en Andes (3,000-4,200 msnm)
+      ✓ Colores variados (morado, rojo, amarillo)
+      ✓ Tamaño pequeño a mediano
+      ✓ Mayor contenido nutricional
+      ✓ Sabores únicos y variados
+      ✓ Preserva genética ancestral
+      ✓ Resistente a condiciones extremas
+      ✓ Precio más alto
+      ✓ Menor rendimiento comercial
+      
+      **🥔 PAPA COMÚN (MODERNA):**
+      ✓ Pocas variedades (híbridos)
+      ✓ Cualquier altitud
+      ✓ Blanca, amarilla uniforme
+      ✓ Tamaño grande y uniforme
+      ✓ Nutrición estándar
+      ✓ Sabor neutro
+      ✓ Genética modificada/seleccionada
+      ✓ Requiere más cuidados
+      ✓ Precio accesible
+      ✓ Alto rendimiento comercial
+      
+      **🌟 VENTAJAS DE ELEGIR PAPAS NATIVAS:**
+      
+      1. **Biodiversidad:** Preservas patrimonio genético
+      2. **Nutrición:** Más antioxidantes y minerales
+      3. **Sabor:** Experiencia gastronómica superior
+      4. **Sostenibilidad:** Apoyas agricultura familiar
+      5. **Cultura:** Mantienes tradiciones ancestrales
+      6. **Salud:** Mejor índice glucémico
+      
+      **🌍 IMPACTO:**
+      Consumir papa nativa ayuda a 600,000 familias campesinas peruanas
+  
+  utter_preguntar_biodiversidad:
+  - text: |
+      🌈 **BIODIVERSIDAD DE LA PAPA PERUANA**
+      
+      **📊 CIFRAS IMPRESIONANTES:**
+      • 5,000 variedades de papa en el mundo
+      • 3,800 son peruanas (76%)
+      • 151 especies silvestres en Perú
+      • 4,500 variedades en bancos de germoplasma
+      
+      **❓ ¿POR QUÉ TANTA DIVERSIDAD?**
+      
+      1. **Centro de Origen:**
+         • Domesticada en Perú hace 8,000 años
+         • Evolución natural prolongada
+      
+      2. **Geografía Andina:**
+         • Diversos pisos ecológicos
+         • Variedad de microclimas
+         • Aislamiento geográfico
+      
+      3. **Selección Campesina:**
+         • 8,000 años de mejoramiento
+         • Adaptación a necesidades locales
+         • Preservación intergeneracional
+      
+      4. **Diversidad Genética Natural:**
+         • Cruzamientos naturales
+         • Mutaciones adaptativas
+      
+      **🏛️ CONSERVACIÓN:**
+      
+      **CIP (Centro Internacional de la Papa):**
+      • 4,500 variedades conservadas
+      • Banco de germoplasma mundial
+      • Sede en Lima, Perú
+      
+      **Parque de la Papa (Cusco):**
+      • 1,300 variedades conservadas
+      • Gestión comunitaria
+      • 6 comunidades quechuas
+      
+      **INIA (Instituto Nacional):**
+      • Investigación y conservación
+      • Producción de semilla certificada
+      
+      **⚠️ AMENAZAS:**
+      • Cambio climático
+      • Pérdida de conocimiento ancestral
+      • Preferencia por variedades comerciales
+      • Erosión genética
+      
+      **🛡️ IMPORTANCIA:**
+      • Seguridad alimentaria global
+      • Adaptación al cambio climático
+      • Fuente de genes resistentes
+      • Patrimonio de la humanidad
+      
+      ¡Cada variedad perdida es irrecuperable! 🚨
+  
+  utter_preguntar_exportacion:
+  - text: |
+      🌎 **EXPORTACIÓN DE PAPA PERUANA**
+      
+      **📈 DATOS DE EXPORTACIÓN:**
+      
+      **Papa Fresca:**
+      • Volumen: 10,000 - 15,000 toneladas/año
+      • Valor: USD 4-6 millones
+      • Variedades: Canchan, Única, Perricholi
+      
+      **Papa Procesada:**
+      • Papas prefritas congeladas
+      • Hojuelas (chips)
+      • Papa deshidratada
+      • Chuño
+      
+      **🗺️ PRINCIPALES DESTINOS:**
+      
+      1. **Estados Unidos** (30%)
+      2. **Reino Unido** (20%)
+      3. **España** (15%)
+      4. **Países Bajos** (12%)
+      5. **Chile** (10%)
+      6. Otros: Colombia, Ecuador, Brasil
+      
+      **🥔 PAPA NATIVA PARA EXPORTACIÓN:**
+      
+      • Mercado especializado gourmet
+      • Restaurantes de alta cocina
+      • Tiendas orgánicas/especializadas
+      • Papa morada para chips premium
+      • Papa amarilla procesada
+      
+      **📊 OPORTUNIDADES:**
+      
+      ✓ Creciente demanda de superalimentos
+      ✓ Interés en productos étnicos
+      ✓ Gastronomía peruana en expansión
+      ✓ Mercado orgánico en crecimiento
+      
+      **🚧 DESAFÍOS:**
+      
+      ✗ Volúmenes pequeños
+      ✗ Estacionalidad
+      ✗ Costos de certificación
+      ✗ Logística (perecible)
+      ✗ Competencia (Ecuador, Colombia)
+      
+      **🏆 CASOS DE ÉXITO:**
+      
+      • Marcas como "Nativo" exportan papa morada
+      • Chips de papa de colores en USA/Europa
+      • Papa amarilla congelada
+      
+      **💡 POTENCIAL:**
+      Perú podría triplicar exportaciones enfocándose en papas nativas premium
+  
+  utter_preguntar_plagas:
+  - text: |
+      🐛 **PLAGAS Y ENFERMEDADES DE LA PAPA**
+      
+      **🔴 PRINCIPALES PLAGAS:**
+      
+      **1. Gorgojo de los Andes** (Premnotrypes spp.)
+      • Daño: Larvas perforan tubérculos
+      • Pérdidas: 50-90% sin control
+      • Control: Rotación, aporque alto, trampas
+      
+      **2. Polilla de la Papa** (Phthorimaea operculella)
+      • Daño: Minas en hojas y tubérculos
+      • Control: Aporque, almacén oscuro
+      
+      **3. Pulgones** (Aphididae)
+      • Daño: Transmiten virus
+      • Control: Depredadores naturales
+      
+      **🔴 PRINCIPALES ENFERMEDADES:**
+      
+      **1. Rancha o Tizón Tardío** (Phytophthora infestans)
+      • La más destructiva (causó hambruna irlandesa)
+      • Síntomas: Manchas oscuras en hojas
+      • Control: Fungicidas, variedades resistentes
+      
+      **2. Verruga de la Papa** (Synchytrium endobioticum)
+      • Solo en Andes
+      • Deformaciones tipo coliflor
+      • Control: Cuarentena, variedades resistentes
+      
+      **3. Virus** (PVY, PLRV, PVX)
+      • Transmitidos por pulgones
+      • Reducen rendimiento
+      • Control: Semilla certificada
+      
+      **🌿 CONTROL ECOLÓGICO:**
+      
+      ✓ **Rotación de cultivos** (3-4 años)
+      ✓ **Uso de semilla certificada**
+      ✓ **Aporque alto** (protege tubérculos)
+      ✓ **Eliminación de plantas enfermas**
+      ✓ **Control biológico:**
+         • Beauveria bassiana (hongo)
+         • Bacillus thuringiensis
+         • Mariquitas contra pulgones
+      
+      ✓ **Plantas compañeras:**
+      • Muña (repelente natural)
+      • Ajo, cebolla
+      
+      **🧪 MANEJO INTEGRADO (MIP):**
+      1. Prevención (semilla sana)
+      2. Monitoreo constante
+      3. Control cultural
+      4. Control biológico
+      5. Químicos (último recurso)
+      
+      **🛡️ RESISTENCIA GENÉTICA:**
+      Muchas papas nativas tienen resistencia natural a plagas y enfermedades
+  
+  utter_bot_desafio:
+  - text: "Soy un asistente virtual inteligente creado para ayudarte a conocer las papas nativas del Perú. Uso inteligencia artificial para entender tus preguntas y darte información precisa. ¿Qué te gustaría saber sobre las papas? 🤖🥔"
+  
+  utter_default:
+  - text: |
+      Disculpa, no entendí bien tu pregunta. 🤔
+      
+      Puedo ayudarte con información sobre:
+      
+      📚 **Temas disponibles:**
+      • Variedades de papas nativas
+      • Beneficios nutricionales
+      • Cultivo y agricultura
+      • Historia y origen
+      • Regiones productoras
+      • Usos culinarios y recetas
+      • Precios y dónde comprar
+      • Conservación y almacenamiento
+      • Diferencias entre papas
+      • Biodiversidad
+      • Exportación
+      • Plagas y enfermedades
+      
+      ¿Sobre qué tema te gustaría saber más?
+
+actions:
+  - action_respuesta_ia
+  - action_consultar_variedad
+  - action_buscar_receta
+  - action_registrar_conversacion
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

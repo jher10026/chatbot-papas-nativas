@@ -1,0 +1,81 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "afirmar": 0,
+        "agradecer": 1,
+        "back": 2,
+        "bot_desafio": 3,
+        "despedir": 4,
+        "negar": 5,
+        "nlu_fallback": 6,
+        "out_of_scope": 7,
+        "preguntar_beneficios": 8,
+        "preguntar_biodiversidad": 9,
+        "preguntar_conservacion": 10,
+        "preguntar_cultivo": 11,
+        "preguntar_diferencias": 12,
+        "preguntar_exportacion": 13,
+        "preguntar_historia": 14,
+        "preguntar_plagas": 15,
+        "preguntar_precio": 16,
+        "preguntar_regiones": 17,
+        "preguntar_usos_culinarios": 18,
+        "preguntar_variedad_especifica": 19,
+        "preguntar_variedades": 20,
+        "restart": 21,
+        "saludar": 22,
+        "session_start": 23
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_respuesta_ia": 13,
+        "action_consultar_variedad": 14,
+        "action_buscar_receta": 15,
+        "action_registrar_conversacion": 16,
+        "utter_agradecer": 17,
+        "utter_bot_desafio": 18,
+        "utter_default": 19,
+        "utter_despedir": 20,
+        "utter_preguntar_beneficios": 21,
+        "utter_preguntar_biodiversidad": 22,
+        "utter_preguntar_conservacion": 23,
+        "utter_preguntar_cultivo": 24,
+        "utter_preguntar_diferencias": 25,
+        "utter_preguntar_exportacion": 26,
+        "utter_preguntar_historia": 27,
+        "utter_preguntar_plagas": 28,
+        "utter_preguntar_precio": 29,
+        "utter_preguntar_regiones": 30,
+        "utter_preguntar_usos_culinarios": 31,
+        "utter_preguntar_variedades": 32,
+        "utter_saludar": 33
+      },
+      "entities": {
+        "region": 0,
+        "variedad": 1
+      },
+      "slots": {
+        "variedad_consultada_0": 0
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

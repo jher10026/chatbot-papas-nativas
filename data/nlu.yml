@@ -1,0 +1,230 @@
+version: "3.1"
+
+nlu:
+- intent: saludar
+  examples: |
+    - hola
+    - buenos días
+    - buenas tardes
+    - buenas noches
+    - hey
+    - holi
+    - saludos
+    - qué tal
+    - cómo estás
+    - hola bot
+    - buenos días chatbot
+
+- intent: despedir
+  examples: |
+    - adiós
+    - hasta luego
+    - nos vemos
+    - chau
+    - bye
+    - gracias por todo
+    - eso es todo
+    - hasta pronto
+    - me tengo que ir
+    - gracias, chau
+
+- intent: afirmar
+  examples: |
+    - sí
+    - correcto
+    - exacto
+    - claro
+    - por supuesto
+    - ok
+    - está bien
+    - dale
+    - perfecto
+    - de acuerdo
+
+- intent: negar
+  examples: |
+    - no
+    - nunca
+    - no quiero
+    - negativo
+    - para nada
+    - no gracias
+    - no me interesa
+
+- intent: agradecer
+  examples: |
+    - gracias
+    - muchas gracias
+    - te lo agradezco
+    - gracias por la info
+    - excelente, gracias
+    - muy amable
+    - gracias por tu ayuda
+
+- intent: preguntar_variedades
+  examples: |
+    - qué variedades de papa hay
+    - cuántas variedades de papa nativa existen
+    - tipos de papa peruana
+    - variedades de papa
+    - cuáles son las papas nativas
+    - qué papas nativas hay en Perú
+    - nombre de papas peruanas
+    - clases de papa
+    - dime las variedades de papa
+    - cuáles son las más conocidas
+    - papas típicas del Perú
+    - variedades más cultivadas
+
+- intent: preguntar_variedad_especifica
+  examples: |
+    - qué es la papa [amarilla](variedad)
+    - cuéntame sobre la papa [huayro](variedad)
+    - información de la papa [peruanita](variedad)
+    - características de la papa [negra](variedad)
+    - qué es la [papa huamantanga](variedad)
+    - háblame de la papa [ccompis](variedad)
+    - para qué sirve la papa [canchan](variedad)
+    - cómo es la [papa huayro](variedad)
+    - cuéntame de la [tumbay](variedad)
+    - qué propiedades tiene la papa [morada](variedad)
+
+- intent: preguntar_beneficios
+  examples: |
+    - qué beneficios tiene la papa nativa
+    - es nutritiva la papa
+    - propiedades de la papa
+    - vitaminas de la papa
+    - beneficios nutricionales
+    - qué nutrientes tiene
+    - es saludable la papa nativa
+    - valor nutricional
+    - por qué es buena la papa
+    - qué aporta la papa a la salud
+    - ventajas de comer papa nativa
+    - la papa engorda
+
+- intent: preguntar_cultivo
+  examples: |
+    - cómo se cultiva la papa nativa
+    - dónde se siembra
+    - cuándo se cosecha
+    - proceso de cultivo
+    - agricultura de papa
+    - cómo plantar papas nativas
+    - época de siembra
+    - clima para cultivar papa
+    - cuánto tiempo tarda en crecer
+    - qué necesita la papa para crecer
+    - técnicas de cultivo
+    - cuidados de la papa
+
+- intent: preguntar_historia
+  examples: |
+    - cuál es la historia de la papa
+    - origen de la papa
+    - de dónde viene la papa
+    - quién descubrió la papa
+    - historia de la papa peruana
+    - cuándo se domesticó la papa
+    - origen de la papa nativa
+    - cómo llegó la papa al mundo
+    - importancia histórica de la papa
+    - la papa en la época incaica
+
+- intent: preguntar_regiones
+  examples: |
+    - dónde se cultiva la papa nativa
+    - en qué regiones hay papa
+    - regiones productoras
+    - dónde hay más variedades
+    - departamentos que cultivan papa
+    - zonas de cultivo
+    - qué regiones producen papa
+    - cuál es la región con más papas
+    - dónde se produce más papa
+    - departamentos paperos
+
+- intent: preguntar_usos_culinarios
+  examples: |
+    - cómo se cocina la papa nativa
+    - recetas con papa
+    - usos culinarios
+    - platos con papa nativa
+    - qué se hace con la papa
+    - comidas peruanas con papa
+    - para qué sirve cada variedad
+    - qué platos llevan papa
+    - cómo preparar papa nativa
+    - recetas típicas con papa
+
+- intent: preguntar_precio
+  examples: |
+    - cuánto cuesta la papa nativa
+    - precio de la papa
+    - qué precio tiene
+    - dónde comprar papa nativa
+    - es cara la papa nativa
+    - cuánto vale el kilo
+    - precio por kilo
+    - dónde la venden
+
+- intent: preguntar_conservacion
+  examples: |
+    - cómo conservar la papa
+    - cómo guardar papas
+    - cuánto dura la papa
+    - se puede congelar la papa
+    - cómo almacenar papas nativas
+    - tiempo de conservación
+    - la papa se daña rápido
+    - cómo evitar que se pudra
+
+- intent: preguntar_diferencias
+  examples: |
+    - diferencia entre papa nativa y papa común
+    - qué diferencia hay
+    - en qué se diferencia
+    - papa nativa vs papa blanca
+    - ventajas de la papa nativa
+    - por qué elegir papa nativa
+    - qué tiene de especial
+
+- intent: preguntar_biodiversidad
+  examples: |
+    - por qué hay tantas variedades
+    - biodiversidad de la papa
+    - importancia de la diversidad
+    - conservación de variedades
+    - cuántas especies existen
+    - papa silvestre
+    - preservación de la papa nativa
+    - banco de germoplasma
+
+- intent: preguntar_exportacion
+  examples: |
+    - se exporta la papa nativa
+    - a qué países se exporta
+    - mercado internacional
+    - exportación de papa peruana
+    - dónde se vende papa peruana
+    - comercio de papa nativa
+
+- intent: preguntar_plagas
+  examples: |
+    - qué plagas afectan la papa
+    - enfermedades de la papa
+    - cómo proteger el cultivo
+    - problemas en el cultivo
+    - rancha de la papa
+    - gorgojo de los andes
+    - control de plagas
+
+- intent: bot_desafio
+  examples: |
+    - eres un robot
+    - eres humano
+    - quién eres
+    - qué eres
+    - eres una persona
+    - cómo funcionas

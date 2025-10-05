@@ -1,0 +1,152 @@
+version: "3.1"
+
+stories:
+
+- story: saludo inicial completo
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+
+- story: despedida
+  steps:
+  - intent: despedir
+  - action: utter_despedir
+
+- story: agradecer
+  steps:
+  - intent: agradecer
+  - action: utter_agradecer
+
+- story: consultar variedad específica
+  steps:
+  - intent: preguntar_variedad_especifica
+  - action: action_consultar_variedad
+
+- story: preguntar variedades generales
+  steps:
+  - intent: preguntar_variedades
+  - action: utter_preguntar_variedades
+
+- story: preguntar beneficios
+  steps:
+  - intent: preguntar_beneficios
+  - action: utter_preguntar_beneficios
+
+- story: preguntar cultivo
+  steps:
+  - intent: preguntar_cultivo
+  - action: utter_preguntar_cultivo
+
+- story: preguntar historia
+  steps:
+  - intent: preguntar_historia
+  - action: utter_preguntar_historia
+
+- story: preguntar regiones
+  steps:
+  - intent: preguntar_regiones
+  - action: utter_preguntar_regiones
+
+- story: preguntar usos culinarios
+  steps:
+  - intent: preguntar_usos_culinarios
+  - action: utter_preguntar_usos_culinarios
+
+- story: preguntar precios
+  steps:
+  - intent: preguntar_precio
+  - action: utter_preguntar_precio
+
+- story: preguntar conservación
+  steps:
+  - intent: preguntar_conservacion
+  - action: utter_preguntar_conservacion
+
+- story: preguntar diferencias
+  steps:
+  - intent: preguntar_diferencias
+  - action: utter_preguntar_diferencias
+
+- story: preguntar biodiversidad
+  steps:
+  - intent: preguntar_biodiversidad
+  - action: utter_preguntar_biodiversidad
+
+- story: preguntar exportación
+  steps:
+  - intent: preguntar_exportacion
+  - action: utter_preguntar_exportacion
+
+- story: preguntar plagas
+  steps:
+  - intent: preguntar_plagas
+  - action: utter_preguntar_plagas
+
+- story: interacción con bot
+  steps:
+  - intent: bot_desafio
+  - action: utter_bot_desafio
+
+- story: conversación completa típica
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - intent: preguntar_variedades
+  - action: utter_preguntar_variedades
+  - intent: preguntar_variedad_especifica
+  - action: action_consultar_variedad
+  - intent: preguntar_usos_culinarios
+  - action: utter_preguntar_usos_culinarios
+  - intent: agradecer
+  - action: utter_agradecer
+  - intent: despedir
+  - action: utter_despedir
+
+- story: flujo de compra
+  steps:
+  - intent: preguntar_variedades
+  - action: utter_preguntar_variedades
+  - intent: preguntar_precio
+  - action: utter_preguntar_precio
+  - intent: preguntar_conservacion
+  - action: utter_preguntar_conservacion
+
+- story: flujo educativo
+  steps:
+  - intent: preguntar_historia
+  - action: utter_preguntar_historia
+  - intent: preguntar_biodiversidad
+  - action: utter_preguntar_biodiversidad
+  - intent: preguntar_diferencias
+  - action: utter_preguntar_diferencias
+
+- story: flujo agrícola
+  steps:
+  - intent: preguntar_cultivo
+  - action: utter_preguntar_cultivo
+  - intent: preguntar_regiones
+  - action: utter_preguntar_regiones
+  - intent: preguntar_plagas
+  - action: utter_preguntar_plagas
+
+- story: respuesta general con ia
+  steps:
+  - or:
+    - intent: preguntar_variedades
+    - intent: preguntar_beneficios
+    - intent: preguntar_cultivo
+    - intent: preguntar_historia
+    - intent: preguntar_regiones
+    - intent: preguntar_usos_culinarios
+    - intent: preguntar_precio
+    - intent: preguntar_conservacion
+    - intent: preguntar_diferencias
+    - intent: preguntar_biodiversidad
+    - intent: preguntar_exportacion
+    - intent: preguntar_plagas
+  - action: action_respuesta_ia
+
+- story: consultar variedad con ia
+  steps:
+  - intent: preguntar_variedad_especifica
+  - action: action_consultar_variedad

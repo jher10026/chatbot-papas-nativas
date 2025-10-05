@@ -1,0 +1,20 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-variedad",
+      "2": "I-variedad",
+      "3": "L-variedad",
+      "4": "U-variedad",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-variedad": 1,
+      "I-variedad": 2,
+      "L-variedad": 3,
+      "U-variedad": 4,
+      "O": 0
+    },
+    "num_tags": 5
+  }
+]
