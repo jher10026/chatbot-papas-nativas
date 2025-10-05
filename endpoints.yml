@@ -1,5 +1,5 @@
 action_endpoint:
-  url: "http://localhost:5055/webhook"
+  url: "web-production-f1c6.up.railway.app"
 
 # Configuración de tracker store para analytics
 tracker_store:
